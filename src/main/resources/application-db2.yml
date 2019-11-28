@@ -1,0 +1,9 @@
+spring:
+    datasource:
+      url: jdbc:db2://114.116.34.199:50001/tbmprdxj
+      username: tbmprd
+      password: pccw
+      driver-class-name: com.ibm.db2.jcc.DB2Driver
+      jpa:
+        #此次方言若使用org.hibernate.dialect.DB2400Dialect会出现分页报错
+        database-platform: org.hibernate.dialect.DB2Dialect

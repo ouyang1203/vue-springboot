@@ -1,0 +1,23 @@
+#YML文件不能有tab键，只能用空格，同时配置项的值前面必须要有空格
+server:
+  port: 8080
+#允许localhost:3000跨域请求
+CorsFilter:
+  url: http://localhost:3000,http://192.168.1.3,http://192.168.1.3:3000
+spring:
+  application:
+    name: bootstrip
+  profiles:
+    #指定加载不同库
+    active: mysql
+  mvc:
+    view: 
+      prefix: /view/
+      suffix: .html
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/static/js/
+  jpa:
+    show-sql: true
+    format_sql: false
+    hibernate:
+      ddl-auto: update
